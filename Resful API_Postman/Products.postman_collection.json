@@ -1,0 +1,235 @@
+{
+	"info": {
+		"_postman_id": "8e97ed3d-3d60-40a1-9634-2453bae9d09f",
+		"name": "Products",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26561432"
+	},
+	"item": [
+		{
+			"name": "get all products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://altashop-api.fly.dev/api/products",
+					"protocol": "https",
+					"host": [
+						"altashop-api",
+						"fly",
+						"dev"
+					],
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create new product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Sony PS5\",\r\n    \"description\":\"play has no limits\",\r\n    \"price\":299,\r\n    \"categories\":[\r\n        2\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://altashop-api.fly.dev/api/products",
+					"protocol": "https",
+					"host": [
+						"altashop-api",
+						"fly",
+						"dev"
+					],
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get product by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://altashop-api.fly.dev/api/products/11276",
+					"protocol": "https",
+					"host": [
+						"altashop-api",
+						"fly",
+						"dev"
+					],
+					"path": [
+						"api",
+						"products",
+						"11276"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete product by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://altashop-api.fly.dev/api/products/1",
+					"protocol": "https",
+					"host": [
+						"altashop-api",
+						"fly",
+						"dev"
+					],
+					"path": [
+						"api",
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Assign a product rating",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJGdWxsbmFtZSI6IkFsbGlmYWggQWRhd2l5YWgiLCJFbWFpbCI6ImFsbGlmYWhhZGF3aXlhaEBnbWFpbC5jb20ifQ.xidv0a_9dFO0H0HrDBWU2g6Ud8F9IPn7HKSvlTxzST8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"count\":2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://altashop-api.fly.dev/api/products/11658/ratings",
+					"protocol": "https",
+					"host": [
+						"altashop-api",
+						"fly",
+						"dev"
+					],
+					"path": [
+						"api",
+						"products",
+						"11658",
+						"ratings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get product ranting",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://altashop-api.fly.dev/api/products/11658/ratings",
+					"protocol": "https",
+					"host": [
+						"altashop-api",
+						"fly",
+						"dev"
+					],
+					"path": [
+						"api",
+						"products",
+						"11658",
+						"ratings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create a comment for product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJGdWxsbmFtZSI6IkFsbGlmYWggQWRhd2l5YWgiLCJFbWFpbCI6ImFsbGlmYWhhZGF3aXlhaEBnbWFpbC5jb20ifQ.xidv0a_9dFO0H0HrDBWU2g6Ud8F9IPn7HKSvlTxzST8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"content\":\"the games are great including Gran Turismo 7 but sadly GT4 is much better\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://altashop-api.fly.dev/api/products/2/comments",
+					"protocol": "https",
+					"host": [
+						"altashop-api",
+						"fly",
+						"dev"
+					],
+					"path": [
+						"api",
+						"products",
+						"2",
+						"comments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get product comments",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://altashop-api.fly.dev/api/products/2/comments",
+					"protocol": "https",
+					"host": [
+						"altashop-api",
+						"fly",
+						"dev"
+					],
+					"path": [
+						"api",
+						"products",
+						"2",
+						"comments"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
